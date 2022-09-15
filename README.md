@@ -1,5 +1,5 @@
-# Welcome to Banvi
+# Welcome to BankVi
 
-## Avec Banvi payez à votre rythme !
+## Avec BankVi payez à votre rythme !
 
-### Première application de la suite omni ... Gestion de portefeuille, de commerce et/ou affaire et transactions financière ...
+### Première application de la suite omni ... Gestion de portefeuille, de commerce et/ou affaires et transactions financières ...
