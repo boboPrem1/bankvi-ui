@@ -6,15 +6,9 @@ import { IndexComponent } from './pages/index/index.component';
 import { HeaderComponent } from './pages/index/components/header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    IndexComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, IndexComponent, HeaderComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
