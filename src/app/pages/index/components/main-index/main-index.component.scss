@@ -7,7 +7,7 @@ h * {
 .service_section {
   position: relative;
   width: 80vw;
-  margin: 0 auto 15vh;
+  margin: 0 auto;
 
   > .main_title_container {
     width: 100%;
@@ -21,7 +21,7 @@ h * {
     margin-bottom: 20vh;
   }
 
-  &1, &2 {
+  &1 {
     height: 80vh;
     display: flex;
     justify-content: space-between;
@@ -70,4 +70,29 @@ h * {
       }
     }
   }
+}
+
+.service_section2 {
+  display: none;
+}
+
+.service_section3 {
+  width: 100%;
+  text-align: center;
+
+  button {
+    border: none;
+    padding: 2vh 4vw;
+    background: #1562e6;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 35pt;
+
+
+  }
+}
+
+button:hover {
+  box-shadow: 3pt 3pt 20pt 5pt rgba(22, 98, 230, .6);
 }
