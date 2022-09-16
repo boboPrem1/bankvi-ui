@@ -2,33 +2,73 @@ header {
   display: block;
   height: 100vh;
   width: 100%;
-  font-size: 16px;
   background-image: url("../../../../../assets/images/background_header.png");
   background-size: auto;
 }
-img{
+
+img {
   width: 100%;
 }
 
-.header_container{
-  width: 80%;
+.header_container {
+  width: 95vw;
+  height: 15vh;
   margin: auto;
-  >div{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3px;
+
+  > div {
     display: inline-block;
+    margin: 0 auto;
+
+    > img {
+      width: 20vw;
+    }
+
+    > .links_container a {
+      display: inline-flex;
+      justify-content: space-around;
+      flex-direction: column;
+      margin: 6% 0 0 12.5%;
+      color: white;
+      text-decoration: none;
+
+      > .underline {
+        width: 1.5vw;
+        height: .5vh;
+        background: white;
+        margin: auto;
+        border-radius: 10pt;
+      }
+    }
+  }
+
+  > div:first-child {
     width: 30%;
-    margin: auto;
-    height: 10vh;
+  }
+
+  > div:last-child {
+    width: 60%;
+    font-size: 1.8vw;
+    font-weight: bold;
+
   }
 }
 
-.menu_container{
-  padding: 5vh 0;
-}
-.links_container{
-  display: flex;
-  justify-content: space-around;
-  >a{
+.header_second_row {
+  width: 90vw;
+  margin: 10vh auto 0;
+  color: white;
+  text-align: end;
+
+  > span {
     display: inline-block;
+    padding: 1vw;
+    font-size: 7vw;
+    font-weight: bold;
+    font-style: italic;
   }
 }
+
 

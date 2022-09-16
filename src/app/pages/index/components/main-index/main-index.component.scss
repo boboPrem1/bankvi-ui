@@ -1,0 +1,73 @@
+$text_color1: #7a7673;
+
+h * {
+  padding: 0;
+}
+
+.service_section {
+  position: relative;
+  width: 80vw;
+  margin: 0 auto 15vh;
+
+  > .main_title_container {
+    width: 100%;
+    text-align: center;
+    padding-top: 1vh;
+    color: $text_color1;
+    font-size: 3.5vw;
+  }
+
+  > article:nth-child(2) {
+    margin-bottom: 20vh;
+  }
+
+  &1, &2 {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    color: $text_color1;
+
+    > div {
+      height: 85vh;
+    }
+
+    &_texte_container {
+      width: 22.5vw;
+
+      &_title_container {
+        font-size: 2.25vw;
+      }
+
+      &_desc_container {
+        text-align: left;
+        font-size: 2.8vw;
+      }
+    }
+
+    &_img_container {
+      width: 50vw;
+      padding: 20vh 0;
+
+      > img {
+        width: 50vw;
+        border-radius: 50pt;
+      }
+    }
+  }
+
+  .line_connector {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    &_img_container {
+      width: 70%;
+      margin: auto;
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}

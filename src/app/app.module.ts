@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
 import { HeaderComponent } from './pages/index/components/header/header.component';
+import { MainIndexComponent } from './pages/index/components/main-index/main-index.component';
 
 @NgModule({
-  declarations: [AppComponent, IndexComponent, HeaderComponent],
+  declarations: [AppComponent, IndexComponent, HeaderComponent, MainIndexComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
