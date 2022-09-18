@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
 import { HeaderComponent } from './pages/index/components/header/header.component';
 import { MainIndexComponent } from './pages/index/components/main-index/main-index.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     MainIndexComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })

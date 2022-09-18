@@ -21,8 +21,8 @@ h * {
     margin-bottom: 20vh;
   }
 
-  &1 {
-    height: 80vh;
+  &1, &2 {
+    height: 85vh;
     display: flex;
     justify-content: space-between;
     color: $text_color1;
@@ -70,10 +70,6 @@ h * {
       }
     }
   }
-}
-
-.service_section2 {
-  display: none;
 }
 
 .service_section3 {
