@@ -1,12 +1,13 @@
 header {
   display: block;
-  min-height: 45vw;
-  max-height: 100vh;
+  min-height: 10vw;
+  max-height: 20vh;
   width: 100%;
   background-image: url("../../../../../assets/images/background_header.png");
   background-attachment: fixed;
   background-size: 100vw;
-  a:hover{
+
+  a:hover {
     scale: 1.05;
     cursor: pointer;
   }
@@ -61,34 +62,3 @@ img {
 
   }
 }
-
-.header_second_row {
-  width: 90vw;
-  margin: 10vh auto 0;
-  color: white;
-  text-align: end;
-
-  > span {
-    display: inline-block;
-    padding: 1vw;
-    font-size: 7vw;
-    font-weight: bold;
-    font-style: italic;
-  }
-}
-
-.menuConnexion{
-  text-align: center;
-  color: white;
-  font-size: 2vw;
-  >a{
-    color: white;
-    display: inline-block;
-  }
-  >span{
-    display: inline-block;
-    margin: 10vw .5vw 0;
-  }
-}
-
-
