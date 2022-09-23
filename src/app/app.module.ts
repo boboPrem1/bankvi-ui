@@ -7,7 +7,9 @@ import { HeaderComponent } from './pages/index/components/header/header.componen
 import { MainIndexComponent } from './pages/index/components/main-index/main-index.component';
 import { FooterIndexComponent } from './pages/index/components/footer-index/footer-index.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ValidateTelComponent } from './pages/index/validate-tel/validate-tel.component';
+import { MoreInfosComponent } from './pages/index/more-infos/more-infos.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     MainIndexComponent,
     FooterIndexComponent,
+    ValidateTelComponent,
+    MoreInfosComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule],
+  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
