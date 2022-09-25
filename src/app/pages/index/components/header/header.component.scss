@@ -22,12 +22,12 @@ img {
   height: 9vw;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 3px;
 
   > div {
     display: inline-block;
-    margin: 0 auto;
+    margin: auto;
 
     > img {
       width: 20vw;
@@ -52,13 +52,41 @@ img {
   }
 
   > div:first-child {
-    width: 30%;
+    width: 20%;
   }
 
-  > div:last-child {
-    width: 60%;
+  > div:nth-child(2){
+    width: 30%;
     font-size: 1.8vw;
     font-weight: bold;
+  }
+  >div:last-child{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    span{
+      display: inline-block;
+      width: 8vw;
+      height: 8vw;
+      border: 2px solid white;
+      margin: auto 0;
+      border-radius: 50%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 2vw;
+    }
+  }
+}
 
+.navigation_container{
+  display: flex;
+  justify-content: center;
+  padding: 2.5vw 0;
+  a{
+    display: inline-block;
+    text-decoration: none;
+    margin: .5vw;
   }
 }

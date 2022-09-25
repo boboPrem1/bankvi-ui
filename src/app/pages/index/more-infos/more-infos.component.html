@@ -1,1 +1,64 @@
-<p>more-infos works!</p>
+<section class="formContainer">
+    <form action="" class="validateTel">
+      <div class="form_entete">
+        <span class="return_arrow cont">
+          <!-- <fa-icon [icon]="arrowLeft" [spin]=false size="lg"></fa-icon> -->
+        </span>
+        <span class="titleCont">
+          <h3>Finalisation</h3>
+        </span>
+      </div>
+      <div class="desc_container">Plus d'informations</div>
+      <div class="inputs">
+        <div class="names">
+            <div>
+                <label for="lastname" class="lastname">Nom:
+                </label>
+                <input type="text" name="lastname" id="lastnameInput">
+            </div>            
+            <div>
+                <label for="firstname" class="firstname">Prenom:
+                </label>
+                <input type="text" name="firstname" id="firstnameInput">
+            </div>
+            
+        </div>
+        <div class="pseudo_email">
+            <div>
+                <label for="pseudo" class="pseudo">Pseudo:
+                </label>
+                <input type="text" name="pseudo" id="pseudoInput">
+            </div>            
+            <div>
+                <label for="email" class="email">email:
+                </label>
+                <input type="email" name="email" id="emailInput">
+            </div>
+            
+        </div>
+        <div class="passs">
+            <div>
+                <label for="pass" class="pass">mot de passe:
+                </label>
+                <input type="password" name="pass" id="passInput">
+            </div>            
+            <div>
+                <label for="conf_pass" class="conf_pass">confirmer mot de passe:
+                </label>
+                <input type="password" name="conf_pass" id="conf_passInput">
+            </div>
+        </div>
+        <div class="account_type">
+            <select name="account_type" id="account_type">
+                <option value="standard">Standard</option>
+                <option value="etandue">Etendue</option>
+            </select>
+        </div>
+      </div>
+      <div class="btns_container">
+        <button type="reset">Effacer</button>
+        <button type="submit" (click)="onSend()" >Evoyer</button>
+      </div>
+    </form>
+  </section>
+  

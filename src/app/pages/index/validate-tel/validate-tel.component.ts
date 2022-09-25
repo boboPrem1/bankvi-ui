@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+// import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./validate-tel.component.scss'],
 })
 export class ValidateTelComponent implements OnInit {
-  arrowLeft = faArrowLeft;
+  // arrowLeft = faArrowLeft;
 
   constructor(private router: Router) {}
 

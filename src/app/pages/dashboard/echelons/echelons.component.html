@@ -1,0 +1,21 @@
+<div class="echelon_component">
+    <div class="title_container">
+        <h2>Echelons List</h2>
+    </div>
+    <div class="echelons_container">
+        <div class="echelon" *ngFor="let echelon of echelonList">
+            <div class="img_container"></div>
+            <div class="infos_container">
+                <div class="name_cont">Nom Produit</div>
+                <div class="date_plateform_cont">Date debut Achat - Plateform</div>
+                <div class="montants_content">{{ echelon.payed }} / Montant Total</div>
+                <div class="etaps_cont">Etape {{ echelon.done_steps }} / n</div>
+            </div>
+            <div class="actions_container">
+                <button class="solder_btn">Solder</button>
+                <button class="aug_btn">Augmenter</button>
+                <button class="annuler_btn">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>

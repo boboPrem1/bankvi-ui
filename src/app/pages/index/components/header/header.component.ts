@@ -1,3 +1,5 @@
+import { UserService } from './../../../../services/user.service';
+import { User } from '../../../../types/user';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   logo = '../../../../../assets/images/logo_blanc.png';
 
-  constructor() {}
+  user: any;
 
-  ngOnInit(): void {}
+  constructor(private userService: UserService) {
+
+  }
+
+  ngOnInit(): void {
+    this.user = this.userService.user
+  }
 }
