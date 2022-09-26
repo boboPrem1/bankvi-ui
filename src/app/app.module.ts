@@ -18,6 +18,7 @@ import { EchelonsComponent } from './pages/dashboard/echelons/echelons.component
 import { PlateformsComponent } from './pages/dashboard/plateforms/plateforms.component';
 import { UserProfilComponent } from './pages/dashboard/user-profil/user-profil.component';
 import { FormsModule } from '@angular/forms';
+import { ModalComponentComponent } from './pages/modal-component/modal-component.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     EchelonsComponent,
     PlateformsComponent,
     UserProfilComponent,
+    ModalComponentComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

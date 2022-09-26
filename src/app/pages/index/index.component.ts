@@ -7,7 +7,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
-import * as $ from 'jquery';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-index',
@@ -25,15 +25,16 @@ export class IndexComponent implements OnInit {
   linkedin = faLinkedin;
   instagram = faInstagram;
   @Input() tel = '';
+  @Input() conn_pseudo = '';
+  @Input() conn_pass = '';
 
-  constructor(private router: Router,
-    private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private userService: UserService
+  ) {}
 
-  ngOnInit(): void {
-    $(document).ready(() => {  
-      console.log("Jquery fonctionne");
-  });
-  }
+  ngOnInit(): void {}
 
   getLinks() {
     const links = document.querySelectorAll('.links_container a span');
@@ -80,13 +81,29 @@ export class IndexComponent implements OnInit {
 
   onSignUp(e: any) {
     e.preventDefault();
-    if (this.tel &&
-      this.tel.length === 8){
+    if (this.tel && this.tel.length === 8) {
       this.authService.userToSignUp.tel = this.tel;
       // console.log(this.authService.userToSignUp);
-    this.router.navigate(['validate']);
-  }else{
-      console.log("Entrées incorrect");
+      this.router.navigate(['validate']);
+    } else {
+      console.log('Entrées incorrect');
+    }
+  }
+
+  async onSignIn(e: any) {
+    e.preventDefault();
+    if (this.conn_pseudo && this.conn_pass) {
+      this.authService.signInData.username = this.conn_pseudo;
+      this.authService.signInData.password = this.conn_pass;
+
+      const response = await this.authService.signIn();
+      this.authService.tokenResponse.access_token = response.access_token;
+      this.userService.token = response.access_token;
+
+      console.log(response.access_token);
+
+      //console.log(user);
+      await this.router.navigate(['dashboard']);
     }
   }
 }

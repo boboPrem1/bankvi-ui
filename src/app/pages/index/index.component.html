@@ -86,15 +86,15 @@
       <div class="connexion_form_input_cont">
         <label for="tel">pseudo
         </label>
-        <input id="connexion_tel" name="tel" required placeholder="96 85 89 12" type="tel"/>
+        <input [(ngModel)]="conn_pseudo" id="connexion_tel" name="pseudo" placeholder="pseudo" required type="text"/>
       </div>
       <div class="connexion_form_input_cont">
         <label for="tel">pass
         </label>
-        <input id="connexion_tel" name="tel" required placeholder="96 85 89 12" type="tel"/>
+        <input [(ngModel)]="conn_pass" id="connexion_pass" name="pass" placeholder="xx xx xx" required type="password"/>
       </div>
       <div class="submit_button_cont">
-        <button>Connexion</button>
+        <button (click)="onSignIn($event)">Connexion</button>
       </div>
     </div>
   </div>
@@ -106,7 +106,7 @@
       <div class="inscription_form_input_cont">
         <label for="tel">+228
         </label>
-        <input id="inscription_tel" name="tel" [(ngModel)]="tel" required placeholder="96 85 89 12" type="tel"/>
+        <input [(ngModel)]="tel" id="inscription_tel" name="tel" placeholder="96 85 89 12" required type="tel"/>
       </div>
       <div class="submit_button_cont">
         <button (click)="onSignUp($event)">Inscription</button>

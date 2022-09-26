@@ -1,33 +1,37 @@
 <header>
-    <div class="header_container">
-      <div class="logo_container">
-        <img [src]="logo" alt="" srcset="">
+  <div class="header_container">
+    <div class="logo_container">
+      <img [src]="logo" alt="" srcset="">
+    </div>
+    <div class="menu_container">
+      <div class="links_container">
+        <h2>Bienvenue, {{ user.username }}</h2>
       </div>
-      <div class="menu_container">
-        <div class="links_container">
-          <h2>Bienvenue, {{ user.username }}</h2>
-        </div>
-      </div>
-      <div class="profil_circle_container">
+    </div>
+    <div class="profil_circle_container">
         <span class="profil_circle">
-          <a style="text-decoration: none;color: white;" routerLink="profil" routerLinkActive="active" ariaCurrentWhenActive="page"><span class="users_link_cont">Profil</span></a>
+          <a ariaCurrentWhenActive="page" routerLink="profil" routerLinkActive="active"
+             style="text-decoration: none;color: white;"><span class="users_link_cont">Profil</span></a>
         </span>
-      </div>
     </div>
-  </header>
-  <main>
-    <div class="aside_left">
+  </div>
+</header>
+<main>
+  <div class="aside_left">
     <nav class="navigation_container">
-      <a routerLink="profil" routerLinkActive="active" ariaCurrentWhenActive="page"><span class="users_link_cont">Profil</span></a>
-      <a routerLink="users"><span class="users_link_cont">Utilisateurs</span></a>
-      <a routerLink="products"><span class="users_link_cont">Produits</span></a>
-      <a routerLink="echelons"><span class="users_link_cont">Echelons</span></a>
-      <a routerLink="plateforms"><span class="users_link_cont">Plateforms</span></a>
+      <a ariaCurrentWhenActive="page" routerLink="profil" routerLinkActive="active"><span
+        class="users_link_cont">Profil</span></a>
+      <a *ngIf="user.role === 3" routerLink="users"><span class="users_link_cont">Utilisateurs</span></a>
+      <a *ngIf="user.role === 2 || user.role === 3" routerLink="products"><span class="users_link_cont">Produits</span></a>
+      <a *ngIf="user.role === 1 || user.role === 2 || user.role === 3" routerLink="echelons"><span
+        class="users_link_cont">Echelons</span></a>
+      <a *ngIf="user.role === 3" routerLink="plateforms"><span class="users_link_cont">Plateforms</span></a>
+      <a (click)="onDestroy()" style="cursor: pointer;"><span class="users_link_cont">Deconexion</span></a>
     </nav>
-    </div>
-    <div class="aside_right">
+  </div>
+  <div class="aside_right">
 
-  <router-outlet></router-outlet>
-    </div>
-  </main>
+    <router-outlet></router-outlet>
+  </div>
+</main>
 
