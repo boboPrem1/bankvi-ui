@@ -84,9 +84,14 @@
     <div class="connexion_form">
       <h3>Entrez votre numéro de téléphone</h3>
       <div class="connexion_form_input_cont">
-        <label for="tel">+228
+        <label for="tel">pseudo
         </label>
-        <input id="connexion_tel" name="tel" placeholder="96 85 89 12" type="tel"/>
+        <input id="connexion_tel" name="tel" required placeholder="96 85 89 12" type="tel"/>
+      </div>
+      <div class="connexion_form_input_cont">
+        <label for="tel">pass
+        </label>
+        <input id="connexion_tel" name="tel" required placeholder="96 85 89 12" type="tel"/>
       </div>
       <div class="submit_button_cont">
         <button>Connexion</button>
@@ -101,10 +106,10 @@
       <div class="inscription_form_input_cont">
         <label for="tel">+228
         </label>
-        <input id="inscription_tel" name="tel" placeholder="96 85 89 12" type="tel"/>
+        <input id="inscription_tel" name="tel" [(ngModel)]="tel" required placeholder="96 85 89 12" type="tel"/>
       </div>
       <div class="submit_button_cont">
-        <button (click)="onSignUp()">Inscription</button>
+        <button (click)="onSignUp($event)">Inscription</button>
       </div>
     </div>
   </div>

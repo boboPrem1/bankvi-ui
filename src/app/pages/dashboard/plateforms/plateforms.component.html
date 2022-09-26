@@ -1,1 +1,17 @@
-<p>plateforms works!</p>
+<div class="plateforms_component">
+    <div class="plateforms_component_title_container">
+        <h2>Liste des Plateformes</h2>
+    </div>
+    <div class="plateforms_container">
+        <div class="plateform" *ngFor="let plateform of plateformList">
+            <div class="infos_container">
+                <span>{{ plateform.id }}</span>
+                <span>{{ plateform.name }}</span>
+            </div>
+            <div class="actions_container">
+                <span>modifier</span>
+                <span>supprimer</span>
+            </div>
+        </div>
+    </div>
+</div>

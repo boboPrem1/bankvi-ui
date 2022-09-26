@@ -13,10 +13,10 @@
       <label class="input_label" for="code">
         Code
       </label>
-      <input id="" max="999999" maxlength="6" name="" placeholder="X X X X X X" type="number">
+    <input id="" max="999999" maxlength="6" name="codeInput" placeholder="X X X X X X" [(ngModel)]="userCode" type="number">
     </div>
     <div class="button_container">
-      <button (click)="onSend()">Envoyer</button>
+      <button (click)="onSend($event)">Envoyer</button>
     </div>
   </form>
 </section>

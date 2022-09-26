@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './pages/index/index.component';
 import { HeaderComponent } from './pages/index/components/header/header.component';
@@ -16,6 +17,7 @@ import { ProductsComponent } from './pages/dashboard/products/products.component
 import { EchelonsComponent } from './pages/dashboard/echelons/echelons.component';
 import { PlateformsComponent } from './pages/dashboard/plateforms/plateforms.component';
 import { UserProfilComponent } from './pages/dashboard/user-profil/user-profil.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { UserProfilComponent } from './pages/dashboard/user-profil/user-profil.c
     PlateformsComponent,
     UserProfilComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule],
+  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

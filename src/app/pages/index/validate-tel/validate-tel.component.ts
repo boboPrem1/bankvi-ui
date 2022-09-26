@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 // import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
@@ -9,12 +10,29 @@ import { Router } from '@angular/router';
 })
 export class ValidateTelComponent implements OnInit {
   // arrowLeft = faArrowLeft;
+  tel = '';
+  name = '';
+  prenom = '';
+  email = '';
+  pass = '';
+  userCode: any;
+  code = 123123;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.authService.userToSignUp.tel){
+      this.tel = this.authService.userToSignUp.tel
+    }else{
+      this.router.navigate(['']);
+    }
+  }
 
-  onSend() {
-    this.router.navigate(['more-infos']);
+  onSend(e: any) {
+    e.preventDefault();
+    if(this.userCode && this.userCode === this.code){
+      this.router.navigate(['more-infos']);
+    }
   }
 }

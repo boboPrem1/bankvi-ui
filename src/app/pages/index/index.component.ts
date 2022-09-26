@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../../services/auth.service';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   faFacebook,
   faInstagram,
@@ -6,6 +7,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-index',
@@ -22,10 +24,16 @@ export class IndexComponent implements OnInit {
   twitter = faTwitter;
   linkedin = faLinkedin;
   instagram = faInstagram;
+  @Input() tel = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    $(document).ready(() => {  
+      console.log("Jquery fonctionne");
+  });
+  }
 
   getLinks() {
     const links = document.querySelectorAll('.links_container a span');
@@ -70,7 +78,15 @@ export class IndexComponent implements OnInit {
     }
   }
 
-  onSignUp() {
+  onSignUp(e: any) {
+    e.preventDefault();
+    if (this.tel &&
+      this.tel.length === 8){
+      this.authService.userToSignUp.tel = this.tel;
+      // console.log(this.authService.userToSignUp);
     this.router.navigate(['validate']);
+  }else{
+      console.log("Entrées incorrect");
+    }
   }
 }

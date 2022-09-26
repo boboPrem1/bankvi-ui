@@ -1,4 +1,6 @@
+import { PlateformService } from './../../../services/plateform.service';
 import { Component, OnInit } from '@angular/core';
+import { Plateform } from 'src/app/types/plateform';
 
 @Component({
   selector: 'app-plateforms',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./plateforms.component.scss']
 })
 export class PlateformsComponent implements OnInit {
-
-  constructor() { }
+plateformList: Plateform[] = [];
+  constructor(private plateformService: PlateformService) { }
 
   ngOnInit(): void {
+    this.plateformList = this.plateformService.plateformList;
   }
 
 }
